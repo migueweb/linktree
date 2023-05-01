@@ -42,4 +42,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relationship with View model.
+     *
+     * @return void
+     */
+    public function view()
+    {
+        return $this->hasMany(View::class);
+    }
+
+    /**
+     * Relationship with Link model.
+     *
+     * @return void
+     */
+    public function link()
+    {
+        return $this->hasMany(Link::class);
+    }
+
 }
