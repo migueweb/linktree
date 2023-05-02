@@ -10,6 +10,17 @@ class Link extends Model
     use HasFactory;
 
     /**
+     * Fillable fields.
+     *
+     * @return void
+     */
+    protected $fillable = [
+        'user_id',
+        'title',
+        'url',
+    ];
+    
+    /**
      * Relationship with Click model.
      *
      * @return void
