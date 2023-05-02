@@ -30,6 +30,12 @@
         </div>
 
         <div>
+            <x-input-label for="bio" :value="__('Bio')" />
+            <x-textarea id="bio" name="bio" type="text" class="mt-1 block w-full" autofocus autocomplete="bio" >{{old('bio', $user->bio)}}</x-textarea>
+            <x-input-error class="mt-2" :messages="$errors->get('bio')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
