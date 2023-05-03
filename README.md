@@ -1,10 +1,12 @@
 # Linktree clone
 A pretty simple linktree clone made with Laravel and tailwindcss.
 
-## screenshots
-![screenshot1]()
-![screenshot2]()
-![screenshot3]()
+## features
+- Responsive, dark theme and light theme
+- Create and edit links
+
+## Preview
+![Linktree clone Screenshots](mockup.webp)
 
 ## Installation
 1. Clone the repository
@@ -16,7 +18,6 @@ A pretty simple linktree clone made with Laravel and tailwindcss.
 7. Run `php artisan migrate --seed`
 8. Run `php artisan serve` to start the development server
 9. Visit `localhost:8000` in your browser
-10. Credentiasls: `test@test.com` - `test1234567890`
 
 ## Contributing
 Thank you for your interest in contributing to Linktree clone! We welcome all contributions, big and small.
