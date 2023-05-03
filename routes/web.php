@@ -5,6 +5,7 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,11 @@ Route::middleware('auth')->group(function () {
     Route::put('/link/{link}', [LinkController::class, 'update'])->name('links.update');
     Route::delete('/link/{link}', [LinkController::class, 'destroy'])->name('links.destroy');
 });
+
+/*
+|--------------------------------------------------------------------------
+| User Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/{username}', [UserController::class, 'index'])->name('user.index');
+

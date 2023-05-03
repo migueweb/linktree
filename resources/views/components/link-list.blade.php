@@ -1,4 +1,4 @@
-<div class="mt-4 sm:m-0 grid grid-flow-row gap-4">
+<div class="grid grid-flow-row gap-4">
     <h2 class="text-xl text-gray-800 dark:text-gray-200 leading-tight">
         Links
     </h2>

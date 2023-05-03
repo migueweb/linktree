@@ -11,9 +11,13 @@
                 <div class="sm:flex flex-row">
                     <section class="sm:w-[50%] px-4 sm:p-0">
                         <x-link-form title='Create a new link' action="{{ route('links.store') }}" method="POST"/>
+                        
+                        <a href="{{ route('user.index', auth()->user()->username) }}" class="text-gray-600 dark:text-gray-400 text-center underline mt-3 inline-block">
+                            Preview
+                        </a>
                     </section>
 
-                    <section class="sm:w-[50%] px-4 sm:px-20">
+                    <section class="sm:w-[50%] px-4 sm:px-20 mt-6 sm:m-0 ">
                         <x-link-list :links="$links"/>
                     </section>
                 </div>

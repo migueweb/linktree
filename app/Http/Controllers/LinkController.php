@@ -16,7 +16,7 @@ class LinkController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|max:255',
+            'title' => 'required|max:60',
             'url' => 'required|url|max:255',
         ]);
 
@@ -50,7 +50,7 @@ class LinkController extends Controller
     public function update(Request $request, Link $link)
     {
         $request->validate([
-            'title' => 'required|max:255',
+            'title' => 'required|max:60',
             'url' => 'required|url|max:255',
         ]);
 

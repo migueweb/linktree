@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight underline">
             <a href="{{ route('dashboard') }}">
-                Back
+                Back to dashboard
             </a>
         </h2>
     </x-slot>
