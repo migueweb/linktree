@@ -6,6 +6,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ClickController;
+use App\Http\Controllers\StatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,6 +56,13 @@ Route::middleware('auth')->group(function () {
     Route::put('/link/{link}', [LinkController::class, 'update'])->name('links.update');
     Route::delete('/link/{link}', [LinkController::class, 'destroy'])->name('links.destroy');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Click Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/redirect/{username}/{link}/{title}', [ClickController::class, 'store'])->name('clicks.store');
 
 /*
 |--------------------------------------------------------------------------

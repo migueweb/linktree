@@ -49,7 +49,7 @@ class User extends Authenticatable
      *
      * @return void
      */
-    public function view()
+    public function views()
     {
         return $this->hasMany(View::class);
     }
@@ -59,9 +59,12 @@ class User extends Authenticatable
      *
      * @return void
      */
-    public function link()
+    public function links()
     {
         return $this->hasMany(Link::class);
     }
 
+    public function linkImpression(){
+        return $this->hasMany(LinkImpression::class);
+    }
 }

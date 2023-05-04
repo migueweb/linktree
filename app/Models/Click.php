@@ -9,6 +9,10 @@ class Click extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'link_id'
+    ];
+    
     /**
      * Relationship with Link model.
      *

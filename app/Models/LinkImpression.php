@@ -5,18 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class View extends Model
+class LinkImpression extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
+        'impressions',
     ];
-    
+
     /**
-     * Relationship with User model.
+     * The relationships with the user model.
      *
-     * @return void
+     * @var array<int, string>
      */
     public function user()
     {

@@ -20,7 +20,7 @@ return new class extends Migration
                     ->references('id')
                     ->onDelete('cascade');
                     
-            $table->timestamp('create_at');
+            $table->timestamps();
         });
     }
 

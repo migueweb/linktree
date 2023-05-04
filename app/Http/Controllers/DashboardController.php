@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Link;
+use App\Http\Controllers\StatsController;
 
 class DashboardController extends Controller
 {
@@ -24,6 +25,8 @@ class DashboardController extends Controller
             }
         }
 
-        return view('dashboard', compact('links'));
+        $stats = StatsController::stats();
+
+        return view('dashboard', compact('links', 'stats'));
     }
 }

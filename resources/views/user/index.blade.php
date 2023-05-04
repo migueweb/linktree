@@ -36,7 +36,7 @@
         <section class="grid grid-flow-row gap-3 sm:gap-4 mt-8">
 
             @foreach ($links as $link)
-                <a href="{{ $link->url }}" target="_blank" class="border border-gray-500 border-opacity-50 dark:border dark:border-slate-300 dark:border-opacity-30 hover:scale-[1.02] ease-out duration-200 rounded-lg">
+                <a href="{{ route('clicks.store', [$user->username, $link, $link->title]) }}" target="_blank" class="border border-gray-500 border-opacity-50 dark:border dark:border-slate-300 dark:border-opacity-30 hover:scale-[1.02] ease-out duration-200 rounded-lg">
                 
                     <div class="bg-white/30 dark:bg-gray-800/50 bg-opacity-25 overflow-hidden shadow-sm rounded-lg p-4">
                         <h2 class="font-semibold text-sm sm:text-base text-gray-800 dark:text-gray-200 leading-tight">
