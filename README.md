@@ -2,8 +2,10 @@
 A pretty simple linktree clone made with Laravel and tailwindcss.
 
 ## features
-- Responsive, dark theme and light theme
+- Profile bio, username
 - Create and edit links
+- Statistics clicks, impressions, views, ctr
+- Responsive, dark theme and light theme
 
 ## Preview
 ![Linktree clone Screenshots](mockup.webp)
