@@ -5,28 +5,28 @@
     </h2>
 
     <div class="flex flex-col sm:flex-row justify-between mt-6 sm:mt-4 gap-4 sm:gap-0 test-sm">
-        <p class="text-slate-100">
+        <p class="text-gray-800 dark:text-slate-100">
             <span class="font-semibold">
                 Views: 
             </span>
             {{ $views }}
         </p>
 
-        <p class="text-slate-100" title="Links impressions">
+        <p class="text-gray-800 dark:text-slate-100" title="Links impressions">
             <span class="font-semibold">
                 Impressions: 
             </span>
             {{ $linksImpressions }}
         </p>
 
-        <p class="text-slate-100 ">
+        <p class="text-gray-800 dark:text-slate-100 ">
             <span class="font-semibold">
                 Clicks:
             </span>
             {{ $clicks }}
         </p>
         
-        <p class="text-slate-100 ">
+        <p class="text-gray-800 dark:text-slate-100 ">
             <span class="font-semibold">
                 CTR: 
             </span>
