@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Validation\Rule;
 
 class User extends Authenticatable
 {
@@ -43,6 +44,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the validation rules for the username.
+     *
+     * @return array
+     */
+    public static function getUsernameValidationRules()
+    {
+        $forbiddenUsernames = [
+            'dashboard', 'home', 'login',
+            'register', 'link', 'links', 
+            'stats', 'profile'
+        ];
+
+        return  [  
+            'required',
+            'string', 
+            'max:255', 
+            'unique:users', 
+            Rule::notIn($forbiddenUsernames),
+            'regex:/^[a-zA-Z0-9._]+$/'
+        ];
+    }
 
     /**
      * Relationship with View model.
