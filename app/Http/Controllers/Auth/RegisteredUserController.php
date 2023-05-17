@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-use Illuminate\Validation\Rule;
 
 class RegisteredUserController extends Controller
 {
@@ -33,7 +32,7 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:55'],
-            'username' => ['required', 'string', 'max:255', 'unique:users', Rule::notIn(['dashboard', 'home', 'login', 'register', 'link', 'stats']),'regex:/^[a-zA-Z0-9._]+$/'],
+            'username' => User::getUsernameValidationRules(),
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
